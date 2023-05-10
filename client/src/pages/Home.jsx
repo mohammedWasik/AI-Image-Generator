@@ -11,6 +11,7 @@ const RenderCard = ({ data, title }) => {
 };
 
 const Home = () => {
+  const base_url = "https://ai-image-generator-one-fawn.vercel.app";
   const [loading, setLoading] = useState(false);
   const [allPosts, SetAllPosts] = useState(null);
   const [searchText, setSearchText] = useState("");
@@ -38,7 +39,7 @@ const Home = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("http://localhost:8080/api/v1/post", {
+        const response = await fetch(`${base_url}/api/v1/post`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

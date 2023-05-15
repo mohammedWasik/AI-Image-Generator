@@ -12,7 +12,7 @@ const CreatePost = () => {
   const [form, setForm] = useState({
     name: "",
     prompt: "",
-    img: "",
+    photo: "",
   });
 
   const [generatingImg, setGeneratingImg] = useState(false);
